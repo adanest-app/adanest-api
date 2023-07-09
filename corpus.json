@@ -1,0 +1,60 @@
+{
+  "name": "Adanest Model",
+  "locale": "id-ID",
+  "data": [
+    {
+      "intent": "pmo.pengenalan",
+      "utterances": [
+        "Apa itu PMO?",
+        "Bisakah kamu menjelaskan PMO?",
+        "Saya ingin tahu lebih banyak tentang PMO",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      "answers": [
+        "PMO adalah istilah yang menggabungkan tiga aspek penting dalam kehidupan seksual, yaitu pornografi, masturbasi, dan orgasme. Ketiga hal ini memiliki pengaruh yang kompleks dan berbeda-beda terhadap individu."
+      ]
+    },
+    {
+      "intent": "pmo.dampak",
+      "utterances": [
+        "Apa dampak dari PMO?",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+        "Apakah PMO memiliki efek negatif?",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      "answers": [
+        "Dampak PMO dapat bervariasi pada setiap individu. Beberapa orang mungkin mengalami dampak negatif seperti penurunan motivasi, kecemasan, gangguan tidur, dan kesulitan dalam menjalin hubungan intim yang sehat. Namun, setiap individu berbeda dan dampaknya dapat beragam.",
+        "PMO dapat memiliki dampak negatif pada kehidupan seseorang. Penggunaan pornografi yang berlebihan dapat mengganggu keseimbangan kehidupan, mengurangi kepuasan dalam hubungan seksual yang sebenarnya, mengurangi motivasi, dan dapat menyebabkan perasaan bersalah atau malu.",
+        "PMO dapat memiliki efek negatif tergantung pada bagaimana seseorang mengelolanya. Penggunaan pornografi yang berlebihan dapat menyebabkan gangguan dalam hubungan interpersonal, kecemasan, perubahan pola tidur, dan mengurangi minat terhadap hubungan intim yang sebenarnya.",
+        "PMO bisa menjadi masalah jika penggunaannya berlebihan dan mengganggu kehidupan sehari-hari serta hubungan interpersonal. Beberapa efek negatif yang mungkin terjadi adalah penurunan motivasi, gangguan tidur, kecemasan, dan ketidakmampuan untuk menjalin hubungan intim yang sehat."
+      ]
+    },
+    {
+      "intent": "pmo.pengelolaan",
+      "utterances": [
+        "Bagaimana cara mengelola PMO?",
+        "Apakah ada cara untuk mengurangi PMO?",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      "answers": [
+        "Mengelola PMO membutuhkan kesadaran dan komitmen diri. Beberapa cara yang dapat dilakukan antara lain mengatur waktu penggunaan pornografi, mencari kegiatan alternatif yang menyenangkan, menjaga keseimbangan kehidupan sosial, dan mencari dukungan dari orang terdekat atau profesional jika diperlukan.",
+        "Untuk mengurangi PMO, penting untuk memiliki kesadaran diri tentang pola penggunaan dan dampaknya. Beberapa strategi yang dapat membantu adalah mengatur batasan waktu, mengalihkan perhatian ke kegiatan yang bermanfaat, menjalin hubungan sosial yang sehat, dan mencari dukungan dari orang terdekat atau terapis.",
+        "Ada beberapa cara yang bisa dilakukan untuk mengontrol penggunaan pornografi. Beberapa di antaranya adalah mengatur batasan waktu dan frekuensi penggunaan, mengalihkan perhatian ke kegiatan produktif, menghindari pencetus atau pemicu pornografi, dan mencari bantuan profesional jika diperlukan.",
+        "Mengatasi kecanduan masturbasi dapat melibatkan kesadaran diri dan upaya untuk menggantikan kegiatan tersebut dengan kegiatan yang lebih sehat dan bermanfaat. Beberapa strategi yang dapat digunakan adalah mengalihkan perhatian, menemukan hobi atau aktivitas yang menarik, mencari dukungan sosial, dan mengikuti terapi jika diperlukan."
+      ]
+    },
+    {
+      "intent": "pengaruh.kesehatanmental",
+      "utterances": [
+        "Bagaimana PMO mempengaruhi kesehatan mental?",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      "answers": [
+        "Penggunaan PMO yang berlebihan dapat berdampak negatif pada kesehatan mental seseorang. Beberapa masalah kesehatan mental yang dapat terjadi adalah penurunan motivasi, kecemasan, depresi, dan masalah self-esteem.",
+        "Studi telah menunjukkan adanya korelasi antara PMO yang berlebihan dengan masalah kesehatan mental seperti depresi, kecemasan, dan perasaan rendah diri. Penting untuk memperhatikan penggunaan PMO yang sehat dan seimbang guna menjaga kesehatan mental yang baik."
+      ]
+    }
+  ]
+}

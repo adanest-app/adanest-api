@@ -11,6 +11,7 @@ import { APP_GUARD, APP_PIPE } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { ChatModule } from './chat/chat.module';
+import { NlpModule } from './nlp/nlp.module';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { ChatModule } from './chat/chat.module';
     CommentsModule,
     RepliesModule,
     ChatModule,
+    NlpModule,
   ],
   providers: [
     {
