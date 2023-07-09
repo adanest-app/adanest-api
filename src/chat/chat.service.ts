@@ -1,0 +1,54 @@
+import { Model, UpdateWriteOpResult } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
+import { Injectable } from '@nestjs/common';
+import { Chat } from './chat.schema';
+
+@Injectable()
+export class ChatService {
+  constructor(@InjectModel(Chat.name) private chatModel: Model<Chat>) {}
+
+  async create(chat: any): Promise<Chat> {
+    return this.chatModel.create(chat);
+  }
+
+  async getMessages(
+    sender: string,
+    receiver: string,
+    isAdmin = false,
+  ): Promise<Chat[]> {
+    return this.chatModel
+      .find(
+        sender || receiver
+          ? {
+              $or: [
+                { sender, receiver },
+                { sender: receiver, receiver: sender },
+              ],
+            }
+          : {},
+      )
+      .find(
+        isAdmin
+          ? {
+              $or: [
+                {
+                  sender,
+                },
+                { receiver },
+              ],
+            }
+          : {},
+      )
+      .populate('sender')
+      .populate('receiver')
+      .sort({ createdAt: 1 })
+      .exec();
+  }
+
+  async updateState(
+    chatId: string,
+    state: number,
+  ): Promise<UpdateWriteOpResult> {
+    return this.chatModel.updateOne({ _id: chatId }, { state }).exec();
+  }
+}
