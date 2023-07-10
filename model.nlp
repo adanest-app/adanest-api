@@ -1001,6 +1001,531 @@
             "domain": "default",
             "utterance": "Apa hubungan antara PMO dan depresi?",
             "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa itu PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bisakah kamu menjelaskan PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Saya ingin tahu lebih banyak tentang PMO",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang kamu ketahui tentang PMO?",
+            "intent": "pmo.pengenalan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa dampak dari PMO?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kehidupan seseorang?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO memiliki efek negatif?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO bisa menjadi masalah?",
+            "intent": "pmo.dampak"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana cara mengelola PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah ada cara untuk mengurangi PMO?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana mengatasi kecanduan masturbasi?",
+            "intent": "pmo.pengelolaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bagaimana PMO mempengaruhi kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apakah PMO dapat menyebabkan masalah kesehatan mental?",
+            "intent": "pengaruh.kesehatanmental"
+          },
+          {
+            "domain": "default",
+            "utterance": "Apa hubungan antara PMO dan depresi?",
+            "intent": "pengaruh.kesehatanmental"
           }
         ],
         "domains": {
@@ -1354,36 +1879,36 @@
               ],
               "perceptrons": [
                 [
-                  0.1339440941810608,
-                  9.0416841506958,
-                  3.5127108097076416,
-                  0.5886786580085754,
-                  4.889586448669434,
-                  3.770362615585327,
-                  1.3561136722564697,
-                  1.3561136722564697,
-                  1.3561136722564697,
-                  1.3561136722564697,
-                  1.3561136722564697,
-                  2.4746062755584717,
-                  0.6426253318786621,
-                  1.1189043521881104,
-                  -2.5751099586486816,
-                  -2.5751099586486816,
-                  -2.2434821128845215,
-                  -1.3018854856491089,
+                  0.13618552684783936,
+                  9.058403968811035,
+                  3.515350818634033,
+                  0.5871825218200684,
+                  4.889540195465088,
+                  3.7720534801483154,
+                  1.3561155796051025,
+                  1.3561155796051025,
+                  1.3561155796051025,
+                  1.3561155796051025,
+                  1.3561155796051025,
+                  2.4730584621429443,
+                  0.6409708261489868,
+                  1.1172497272491455,
+                  -2.57882022857666,
+                  -2.57882022857666,
+                  -2.244678020477295,
+                  -1.3031184673309326,
                   -0.8194159269332886,
                   -0.8194159269332886,
-                  -1.7197126150131226,
-                  -1.7197126150131226,
-                  -1.7197126150131226,
-                  -2.7053377628326416,
-                  -3.0328445434570312,
-                  -1.861544132232666,
-                  -0.9223224520683289,
-                  -0.9391210675239563,
-                  -1.4154006242752075,
-                  -0.9391210675239563,
+                  -1.7214192152023315,
+                  -1.7214192152023315,
+                  -1.7214192152023315,
+                  -2.7085392475128174,
+                  -3.035737991333008,
+                  -1.863135814666748,
+                  -0.9223238229751587,
+                  -0.9407643675804138,
+                  -1.417043924331665,
+                  -0.9407643675804138,
                   -0.4601706564426422,
                   -0.4601706564426422,
                   -0.4601706564426422,
@@ -1391,23 +1916,23 @@
                   -0.009596336632966995,
                   -0.009596336632966995,
                   -0.009596336632966995,
-                  -0.7368086576461792,
-                  -0.7368086576461792,
-                  -0.3261096179485321,
-                  -0.3261096179485321,
-                  -1.2874633073806763,
-                  -1.2874633073806763,
-                  -1.2874633073806763,
-                  -1.2874633073806763,
-                  1.5082675099212959
+                  -0.7379454970359802,
+                  -0.7379454970359802,
+                  -0.32615894079208374,
+                  -0.32615894079208374,
+                  -1.2893487215042114,
+                  -1.2893487215042114,
+                  -1.2893487215042114,
+                  -1.2893487215042114,
+                  1.5096757865030992
                 ],
                 [
-                  2.3143186569213867,
-                  -4.619426727294922,
-                  1.9345715045928955,
-                  2.010011911392212,
-                  -2.545147657394409,
-                  -1.8107595443725586,
+                  2.3128840923309326,
+                  -4.628213405609131,
+                  1.9332014322280884,
+                  2.011507511138916,
+                  -2.5455784797668457,
+                  -1.8111907243728638,
                   -0.38737329840660095,
                   -0.38737329840660095,
                   -0.38737329840660095,
@@ -1416,17 +1941,17 @@
                   -1.1218866109848022,
                   -1.3202065229415894,
                   -0.696130096912384,
-                  4.803972244262695,
-                  4.803972244262695,
-                  0.7481111288070679,
-                  2.5874385833740234,
-                  4.299665451049805,
-                  4.299665451049805,
-                  3.2055373191833496,
-                  3.2055373191833496,
-                  3.2055373191833496,
-                  4.443443298339844,
-                  3.158957004547119,
+                  4.8073344230651855,
+                  4.8073344230651855,
+                  0.7485936880111694,
+                  2.587921380996704,
+                  4.300147533416748,
+                  4.300147533416748,
+                  3.2070095539093018,
+                  3.2070095539093018,
+                  3.2070095539093018,
+                  4.445457935333252,
+                  3.16097092628479,
                   -2.579641342163086,
                   -1.3130065202713013,
                   -1.141643762588501,
@@ -1447,13 +1972,13 @@
                   -1.53472900390625,
                   -1.53472900390625,
                   -1.53472900390625,
-                  0.41713009054804134
+                  0.4163413072578988
                 ],
                 [
-                  -0.11393821984529495,
+                  -0.11396849155426025,
                   -0.7924355864524841,
-                  -1.1458812952041626,
-                  0.7374252676963806,
+                  -1.1458592414855957,
+                  0.7374376058578491,
                   -1.1056885719299316,
                   -0.45208898186683655,
                   -0.15247274935245514,
@@ -1462,31 +1987,31 @@
                   -0.15247274935245514,
                   -0.15247274935245514,
                   -0.7464503645896912,
-                  1.1203680038452148,
+                  1.1203806400299072,
                   -0.5355237722396851,
                   -0.45711010694503784,
                   -0.45711010694503784,
-                  4.236488342285156,
-                  -2.2483882904052734,
-                  -1.2681251764297485,
-                  -1.2681251764297485,
+                  4.236525058746338,
+                  -2.248441696166992,
+                  -1.2681796550750732,
+                  -1.2681796550750732,
                   -0.2815125584602356,
                   -0.2815125584602356,
                   -0.2815125584602356,
                   -0.43357208371162415,
                   -0.9147260785102844,
-                  5.80042028427124,
-                  3.699815511703491,
-                  2.1005492210388184,
-                  3.8499295711517334,
-                  2.1005492210388184,
-                  1.7494057416915894,
-                  1.7494057416915894,
-                  1.7494057416915894,
-                  1.7494057416915894,
-                  2.7850303649902344,
-                  2.7850303649902344,
-                  2.7850303649902344,
+                  5.800480842590332,
+                  3.699953556060791,
+                  2.1004960536956787,
+                  3.8498992919921875,
+                  2.1004960536956787,
+                  1.749418020248413,
+                  1.749418020248413,
+                  1.749418020248413,
+                  1.749418020248413,
+                  2.784996747970581,
+                  2.784996747970581,
+                  2.784996747970581,
                   -1.3917300701141357,
                   -1.3917300701141357,
                   -0.31734025478363037,
@@ -1495,12 +2020,12 @@
                   -0.5353673100471497,
                   -0.5353673100471497,
                   -0.5353673100471497,
-                  1.6942704252658614
+                  1.6942734655607083
                 ],
                 [
-                  0.003212263574823737,
+                  0.0026774914003908634,
                   -1.1854990720748901,
-                  0.5468205809593201,
+                  0.5466523170471191,
                   -1.3735746145248413,
                   -0.9941228628158569,
                   -0.3648153841495514,
@@ -1514,17 +2039,17 @@
                   -0.49708840250968933,
                   -0.8589637279510498,
                   -0.8589637279510498,
-                  1.0266010761260986,
-                  2.0697126388549805,
-                  -1.8540318012237549,
-                  -1.8540318012237549,
+                  1.0269156694412231,
+                  2.070535898208618,
+                  -1.8557015657424927,
+                  -1.8557015657424927,
                   -0.5539265275001526,
                   -0.5539265275001526,
                   -0.5539265275001526,
                   -0.8733644485473633,
-                  0.4000946581363678,
-                  -0.9676060080528259,
-                  -0.6766029000282288,
+                  0.39916422963142395,
+                  -0.9680022597312927,
+                  -0.6769993305206299,
                   -0.2507898211479187,
                   -0.28598809242248535,
                   -0.2507898211479187,
@@ -1532,18 +2057,18 @@
                   -0.016687937080860138,
                   -0.016687937080860138,
                   -0.016687937080860138,
-                  -0.3661433756351471,
-                  -0.3661433756351471,
-                  -0.3661433756351471,
-                  5.278787136077881,
-                  5.278787136077881,
-                  1.3540836572647095,
-                  1.3540836572647095,
-                  3.4152698516845703,
-                  3.4152698516845703,
-                  3.4152698516845703,
-                  3.4152698516845703,
-                  0.07362022372298423
+                  -0.36636191606521606,
+                  -0.36636191606521606,
+                  -0.36636191606521606,
+                  5.280068397521973,
+                  5.280068397521973,
+                  1.3531535863876343,
+                  1.3531535863876343,
+                  3.4155654907226562,
+                  3.4155654907226562,
+                  3.4155654907226562,
+                  3.4155654907226562,
+                  0.07343558163841192
                 ]
               ]
             }
@@ -1553,6 +2078,426 @@
     },
     "intentDomains": {},
     "extraSentences": [
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
+      [
+        "id",
+        "Apa itu PMO?"
+      ],
+      [
+        "id",
+        "Bisakah kamu menjelaskan PMO?"
+      ],
+      [
+        "id",
+        "Saya ingin tahu lebih banyak tentang PMO"
+      ],
+      [
+        "id",
+        "Apa yang kamu ketahui tentang PMO?"
+      ],
+      [
+        "id",
+        "Apa dampak dari PMO?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kehidupan seseorang?"
+      ],
+      [
+        "id",
+        "Apakah PMO memiliki efek negatif?"
+      ],
+      [
+        "id",
+        "Apakah PMO bisa menjadi masalah?"
+      ],
+      [
+        "id",
+        "Bagaimana cara mengelola PMO?"
+      ],
+      [
+        "id",
+        "Apakah ada cara untuk mengurangi PMO?"
+      ],
+      [
+        "id",
+        "Apa yang bisa dilakukan untuk mengontrol penggunaan pornografi?"
+      ],
+      [
+        "id",
+        "Bagaimana mengatasi kecanduan masturbasi?"
+      ],
+      [
+        "id",
+        "Bagaimana PMO mempengaruhi kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apakah PMO dapat menyebabkan masalah kesehatan mental?"
+      ],
+      [
+        "id",
+        "Apa hubungan antara PMO dan depresi?"
+      ],
       [
         "id",
         "Apa itu PMO?"

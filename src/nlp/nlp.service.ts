@@ -7,7 +7,8 @@ export class NlpService {
 
   constructor() {
     this.nlpManager = new NlpManager({ languages: ['id'] });
-    this.train('corpus.json', 'model.nlp');
+    if (process?.env?.NODE_ENV === 'dev')
+      this.train('corpus.json', 'model.nlp');
     this.load('model.nlp');
   }
 
