@@ -1,7 +1,7 @@
 import { Comment, CommentDocument } from './schema/comment.schema';
+import mongoose, { Model, UpdateWriteOpResult } from 'mongoose';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCommentDto } from './dto/create-comment.dto';
-import { Model, UpdateWriteOpResult } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
@@ -38,11 +38,15 @@ export class CommentsService {
     commentId: string,
     content: string,
   ): Promise<UpdateWriteOpResult> {
-    return this.commentModel.updateOne({ _id: commentId }, { content }).exec();
+    return this.commentModel
+      .updateOne({ _id: new mongoose.mongo.ObjectId(commentId) }, { content })
+      .exec();
   }
 
   async remove(commentId: string) {
-    return this.commentModel.deleteOne({ _id: commentId }).exec();
+    return this.commentModel
+      .deleteOne({ _id: new mongoose.mongo.ObjectId(commentId) })
+      .exec();
   }
 
   async checkCommentOwner(commentId: string, owner: string): Promise<boolean> {
@@ -52,6 +56,8 @@ export class CommentsService {
   }
 
   async isExists(commentId: string): Promise<any> {
-    return this.commentModel.exists({ _id: commentId }).exec();
+    return this.commentModel
+      .exists({ _id: new mongoose.mongo.ObjectId(commentId) })
+      .exec();
   }
 }

@@ -27,7 +27,7 @@ export class UsersService {
   }
 
   getUserById(userId: string): Promise<UserDocument> {
-    return this.userModel.findById(userId).exec();
+    return this.userModel.findById(new mongoose.mongo.ObjectId(userId)).exec();
   }
 
   getUserByEmail(email: string): Promise<UserDocument> {
@@ -43,7 +43,9 @@ export class UsersService {
   }
 
   isExists(userId: string): Promise<any> {
-    return this.userModel.exists({ _id: userId }).exec();
+    return this.userModel
+      .exists({ _id: new mongoose.mongo.ObjectId(userId) })
+      .exec();
   }
 
   async isEmailTaken(email: string): Promise<boolean> {
@@ -51,7 +53,9 @@ export class UsersService {
   }
 
   deleteUser(userId: string): Promise<mongoose.mongo.DeleteResult> {
-    return this.userModel.deleteOne({ _id: userId }).exec();
+    return this.userModel
+      .deleteOne({ _id: new mongoose.mongo.ObjectId(userId) })
+      .exec();
   }
 
   updateUser(

@@ -23,11 +23,15 @@ export class RepliesService {
     replyId: string,
     reply: Partial<ReplyDocument>,
   ): Promise<UpdateWriteOpResult> {
-    return this.replyModel.updateOne({ _id: replyId }, reply).exec();
+    return this.replyModel
+      .updateOne({ _id: new mongoose.mongo.ObjectId(replyId) }, reply)
+      .exec();
   }
 
   async remove(replyId: string): Promise<mongoose.mongo.DeleteResult> {
-    return this.replyModel.deleteOne({ _id: replyId }).exec();
+    return this.replyModel
+      .deleteOne({ _id: new mongoose.mongo.ObjectId(replyId) })
+      .exec();
   }
 
   async checkReplyOwner(replyId: string, owner: string): Promise<boolean> {

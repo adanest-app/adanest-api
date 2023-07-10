@@ -35,8 +35,8 @@ export class UsersController {
   @Get('/q')
   async getUser(@Query() { id, username }: GetUserDTO): Promise<UserEntity> {
     return new UserEntity(
-      (await this.usersService.getUserById(id)).toObject() ||
-        (await this.usersService.getUserByUsername(username)).toObject(),
+      (await this.usersService.getUserById(id))?.toObject() ||
+        (await this.usersService.getUserByUsername(username))?.toObject(),
     );
   }
 

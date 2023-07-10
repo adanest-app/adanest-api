@@ -1,4 +1,4 @@
-import { Model, UpdateWriteOpResult } from 'mongoose';
+import mongoose, { Model, UpdateWriteOpResult } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
 import { Chat } from './chat.schema';
@@ -49,6 +49,8 @@ export class ChatService {
     chatId: string,
     state: number,
   ): Promise<UpdateWriteOpResult> {
-    return this.chatModel.updateOne({ _id: chatId }, { state }).exec();
+    return this.chatModel
+      .updateOne({ _id: new mongoose.mongo.ObjectId(chatId) }, { state })
+      .exec();
   }
 }

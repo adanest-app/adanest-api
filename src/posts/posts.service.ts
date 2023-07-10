@@ -22,7 +22,10 @@ export class PostsService {
 
   async getPost(postId: string): Promise<PostDocument> {
     await this.postModel
-      .updateOne({ _id: postId }, { $inc: { visitor: 1 } })
+      .updateOne(
+        { _id: new mongoose.mongo.ObjectId(postId) },
+        { $inc: { visitor: 1 } },
+      )
       .exec();
     return this.postModel.findById(postId).populate('owner').exec();
   }
@@ -55,11 +58,15 @@ export class PostsService {
     postId: string,
     post: Partial<PostDocument>,
   ): Promise<UpdateWriteOpResult> {
-    return this.postModel.updateOne({ _id: postId }, post).exec();
+    return this.postModel
+      .updateOne({ _id: new mongoose.mongo.ObjectId(postId) }, post)
+      .exec();
   }
 
   async deletePost(postId: string): Promise<mongoose.mongo.DeleteResult> {
-    return this.postModel.deleteOne({ _id: postId }).exec();
+    return this.postModel
+      .deleteOne({ _id: new mongoose.mongo.ObjectId(postId) })
+      .exec();
   }
 
   async checkOwner(postId: string, owner: string): Promise<boolean> {
@@ -69,7 +76,9 @@ export class PostsService {
   }
 
   async isExists(postId: string): Promise<any> {
-    return this.postModel.exists({ _id: postId }).exec();
+    return this.postModel
+      .exists({ _id: new mongoose.mongo.ObjectId(postId) })
+      .exec();
   }
 
   async uploadCover(
