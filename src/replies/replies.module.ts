@@ -1,4 +1,4 @@
-import { CommentsModule } from 'src/comments/comments.module';
+import { CommentsModule } from '../comments/comments.module';
 import { Reply, ReplySchema } from './schemas/reply.schema';
 import { RepliesController } from './replies.controller';
 import { RepliesService } from './replies.service';

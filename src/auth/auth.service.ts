@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { UserDocument } from 'src/users/schemas/user.schema';
-import { UsersService } from 'src/users/users.service';
+import { UserDocument } from '../users/schemas/user.schema';
 import { MailerService } from '@nestjs-modules/mailer';
+import { UsersService } from '../users/users.service';
 import { TokenType } from './token/token-type.enum';
 import { InjectModel } from '@nestjs/mongoose';
 import { ConfigService } from '@nestjs/config';
@@ -28,7 +28,6 @@ export class AuthService {
     const user =
       (await this.userService.getUserByUsername(identifier)) ||
       (await this.userService.getUserByEmail(identifier));
-
     if (!user) return null;
     const userPassword = await this.userService.getUserPassword(
       user._id.toString(),
@@ -48,7 +47,7 @@ export class AuthService {
     this.tokenModel.create({
       token,
       userId: payload.sub,
-      type: payload?.type,
+      type: payload.type,
       expireAt: new Date(ms(expiresIn as StringValue) + Date.now()),
     });
     return token;

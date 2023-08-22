@@ -16,29 +16,26 @@ export class ChatService {
     receiver: string,
     isAdmin = false,
   ): Promise<Chat[]> {
+    let query = {};
+    if (isAdmin) {
+      query = {
+        $or: [
+          {
+            sender,
+          },
+          { receiver },
+        ],
+      };
+    } else if (sender && receiver) {
+      query = {
+        $or: [
+          { sender, receiver },
+          { sender: receiver, receiver: sender },
+        ],
+      };
+    }
     return this.chatModel
-      .find(
-        sender || receiver
-          ? {
-              $or: [
-                { sender, receiver },
-                { sender: receiver, receiver: sender },
-              ],
-            }
-          : {},
-      )
-      .find(
-        isAdmin
-          ? {
-              $or: [
-                {
-                  sender,
-                },
-                { receiver },
-              ],
-            }
-          : {},
-      )
+      .find(query)
       .populate('sender')
       .populate('receiver')
       .sort({ createdAt: 1 })

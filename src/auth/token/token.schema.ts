@@ -1,5 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { TokenType } from './token-type.enum';
+import { HydratedDocument } from 'mongoose';
+
+export type TokenDoc = HydratedDocument<Token>;
 
 @Schema({
   timestamps: true,

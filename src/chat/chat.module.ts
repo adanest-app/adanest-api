@@ -1,6 +1,6 @@
-import { User, UserSchema } from 'src/users/schemas/user.schema';
-import { UsersService } from 'src/users/users.service';
+import { User, UserSchema } from '../users/schemas/user.schema';
 import { Chat, ChatSchema } from '../chat/chat.schema';
+import { UsersService } from '../users/users.service';
 import { ChatController } from './chat.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ChatService } from './chat.service';

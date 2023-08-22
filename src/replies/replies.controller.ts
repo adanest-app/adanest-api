@@ -9,7 +9,7 @@ import {
   Put,
   Req,
 } from '@nestjs/common';
-import { CommentsService } from 'src/comments/comments.service';
+import { CommentsService } from '../comments/comments.service';
 import { CreateReplyDto } from './dto/create-reply.dto';
 import { UpdateReplyDto } from './dto/update-reply.dto';
 import { RepliesService } from './replies.service';
@@ -46,7 +46,9 @@ export class RepliesController {
     @Param('replyId') replyId: string,
     @Body() updateReplyDto: UpdateReplyDto,
   ): Promise<any> {
-    if (!this.repliesService.checkReplyOwner(replyId, req.user.userId)) {
+    if (
+      !(await this.repliesService.checkReplyOwner(replyId, req.user.userId))
+    ) {
       throw new NotFoundException('Reply not found');
     }
 
@@ -58,7 +60,9 @@ export class RepliesController {
     @Req() req: any,
     @Param('replyId') replyId: string,
   ): Promise<any> {
-    if (!this.repliesService.checkReplyOwner(replyId, req.user.userId)) {
+    if (
+      !(await this.repliesService.checkReplyOwner(replyId, req.user.userId))
+    ) {
       throw new NotFoundException('Reply not found');
     }
     return this.repliesService.remove(replyId);

@@ -9,16 +9,16 @@ import {
 export class NewUserDTO {
   @IsOptional()
   @IsNotEmpty()
-  username: string;
+  username?: string;
 
   @IsOptional()
   @IsEmail()
   @IsNotEmpty()
-  email: string;
+  email?: string;
 
   @IsOptional()
   @IsNotEmpty()
-  firstName: string;
+  firstName?: string;
 
   @IsOptional()
   lastName?: string;

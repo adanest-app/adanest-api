@@ -63,7 +63,6 @@ export class UsersService {
     newUser: Partial<UserDocument>,
   ): Promise<mongoose.UpdateWriteOpResult> {
     // prettier-ignore
-    if (newUser.email) this.userModel.updateOne({ _id: userId }, { isVerified: false }).exec();
     return this.userModel.updateOne({ _id: userId }, newUser).exec();
   }
 
@@ -75,7 +74,7 @@ export class UsersService {
   async uploadAvatar(
     userId: string,
     file: Express.Multer.File,
-  ): Promise<string | null> {
+  ): Promise<string | undefined> {
     const imagekit = new ImageKit({
       publicKey: this.configService.get('imagekit.publicKey'),
       privateKey: this.configService.get('imagekit.privateKey'),

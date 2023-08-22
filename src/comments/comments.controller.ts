@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { CreateCommentDto } from './dto/create-comment.dto';
 import { UpdateCommentDto } from './dto/update-comment.dto';
-import { PostsService } from 'src/posts/posts.service';
+import { PostsService } from '../posts/posts.service';
 import { CommentsService } from './comments.service';
 
 @Controller('comments')
@@ -51,7 +51,7 @@ export class CommentsController {
     @Param('id') id: string,
     @Body() updateCommentDto: UpdateCommentDto,
   ): Promise<any> {
-    if (!this.commentsService.checkCommentOwner(id, req.user.userId)) {
+    if (!(await this.commentsService.checkCommentOwner(id, req.user.userId))) {
       throw new NotFoundException('Comment not found');
     }
 
@@ -60,7 +60,7 @@ export class CommentsController {
 
   @Delete(':id')
   async remove(@Req() req: any, @Param('id') id: string): Promise<any> {
-    if (!this.commentsService.checkCommentOwner(id, req.user.userId)) {
+    if (!(await this.commentsService.checkCommentOwner(id, req.user.userId))) {
       throw new NotFoundException('Comment not found');
     }
 

@@ -38,11 +38,21 @@ export class PostsService {
     sortField,
     owner,
     type = 'blog',
+  }: {
+    q: string;
+    limit?: number;
+    offset?: number;
+    sort?: mongoose.SortOrder;
+    sortField?: string;
+    owner?: string;
+    type?: string;
   }): Promise<PostDocument[]> {
+    let query = {};
+    if (type) query = { type };
+    if (q) query = { ...query, $text: { $search: q } };
+    if (owner) query = { ...query, owner };
     return this.postModel
-      .find({ type })
-      .find(q ? { $text: { $search: q } } : {})
-      .find(owner ? { owner } : {})
+      .find(query)
       .populate('owner')
       .skip(offset)
       .limit(limit)

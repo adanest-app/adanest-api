@@ -2,8 +2,8 @@ import { Body, Controller, Post, Put, Req, UseGuards } from '@nestjs/common';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { ResetPasswordDto } from './dto/reset-password.dto';
 import { LocalAuthGuard } from './guard/local-auth.guard';
-import { Public } from 'src/common/auth-guard.metadata';
-import { UsersService } from 'src/users/users.service';
+import { Public } from '../common/auth-guard.metadata';
+import { UsersService } from '../users/users.service';
 import { ConfigService } from '@nestjs/config';
 import { AuthService } from './auth.service';
 

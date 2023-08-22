@@ -6,17 +6,17 @@ import {
   Delete,
   Get,
   NotFoundException,
+  ParseFilePipeBuilder,
   Post,
   Put,
   Query,
   Req,
   UploadedFile,
   UseInterceptors,
-  ParseFilePipeBuilder,
 } from '@nestjs/common';
 import { UserEntity } from './serialization/user.serialization';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { Public } from 'src/common/auth-guard.metadata';
+import { Public } from '../common/auth-guard.metadata';
 import { CreateUserDTO } from './dto/create-user.dto';
 import { NewUserDTO } from './dto/update-user.dto';
 import { GetUserDTO } from './dto/get-user.dto';
@@ -67,15 +67,15 @@ export class UsersController {
     @Body() newUser: NewUserDTO,
   ): Promise<string> {
     if (await this.usersService.isExists(req.user.userId)) {
-      let user = await this.usersService.getUserByUsername(newUser?.username);
+      let user = await this.usersService.getUserByUsername(newUser.username);
       if (user?.username?.length > 0 && user.id !== req.user.userId) {
         throw new BadRequestException('Username is taken');
       }
-      user = await this.usersService.getUserByEmail(newUser?.email);
+      user = await this.usersService.getUserByEmail(newUser.email);
       if (user?.email?.length > 0 && user.id !== req.user.userId) {
         throw new BadRequestException('Email is taken');
       }
-      if (newUser?.password?.length > 0) {
+      if (newUser.password?.length > 0) {
         newUser.password = await this.usersService.hashPassword(
           newUser.password,
         );

@@ -1,24 +1,22 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Delete,
   Get,
   NotFoundException,
   Param,
+  ParseFilePipeBuilder,
   Post,
   Put,
-  Req,
   Query,
-} from '@nestjs/common';
-import {
-  BadRequestException,
-  UseInterceptors,
+  Req,
   UploadedFile,
-  ParseFilePipeBuilder,
+  UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { Public } from 'src/common/auth-guard.metadata';
-import { UsersService } from 'src/users/users.service';
+import { Public } from '../common/auth-guard.metadata';
+import { UsersService } from '../users/users.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { GetPostDto } from './dto/get-post.dto';
@@ -80,7 +78,7 @@ export class PostsController {
 
   @Post('/upload/cover')
   @UseInterceptors(FileInterceptor('file'))
-  async uploadAvatar(
+  async uploadCover(
     @Req() req: any,
     @UploadedFile(
       new ParseFilePipeBuilder()
