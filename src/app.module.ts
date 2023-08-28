@@ -12,6 +12,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { ChatModule } from './chat/chat.module';
 import { NlpModule } from './nlp/nlp.module';
+import { LikesModule } from './likes/likes.module';
 
 @Module({
   imports: [
@@ -47,6 +48,7 @@ import { NlpModule } from './nlp/nlp.module';
     RepliesModule,
     ChatModule,
     NlpModule,
+    LikesModule,
   ],
   providers: [
     {
