@@ -29,6 +29,7 @@ describe('CommentsService', () => {
             updateOne: jest.fn(),
             deleteOne: jest.fn(),
             exists: jest.fn(),
+            countDocuments: jest.fn(),
           },
         },
       ],
@@ -203,6 +204,18 @@ describe('CommentsService', () => {
         }),
       );
       expect(await commentsService.isExists(fakeComment._id)).toBe(null);
+    });
+  });
+
+  describe('count', () => {
+    it('should return number of comments', async () => {
+      const count = 1;
+      jest.spyOn(commentModel, 'countDocuments').mockReturnValueOnce(
+        createMock<Query<number, CommentDocument>>({
+          exec: jest.fn().mockResolvedValueOnce(count),
+        }),
+      );
+      expect(await commentsService.count(fakeComment.post)).toBe(count);
     });
   });
 });

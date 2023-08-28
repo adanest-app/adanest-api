@@ -75,4 +75,13 @@ export class CommentsController {
 
     return this.commentsService.findCommentsByPost(postId);
   }
+
+  @Get('post/:id/count')
+  async count(@Param('id') postId: string): Promise<any> {
+    if (!(await this.postsService.isExists(postId))) {
+      throw new NotFoundException('Post Not Found');
+    }
+
+    return this.commentsService.count(postId);
+  }
 }

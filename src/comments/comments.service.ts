@@ -60,4 +60,8 @@ export class CommentsService {
       .exists({ _id: new mongoose.mongo.ObjectId(commentId) })
       .exec();
   }
+
+  async count(postId: string): Promise<number> {
+    return this.commentModel.countDocuments({ post: postId }).exec();
+  }
 }

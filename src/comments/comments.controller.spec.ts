@@ -32,6 +32,7 @@ describe('CommentsController', () => {
             remove: jest.fn(),
             checkCommentOwner: jest.fn(),
             findCommentsByPost: jest.fn(),
+            count: jest.fn(),
           },
         },
         {
@@ -245,6 +246,28 @@ describe('CommentsController', () => {
       expect(
         await commentsController.findCommentsByPost(fakeComment.post),
       ).toEqual([]);
+    });
+  });
+
+  describe('count', () => {
+    it('should throw NotFoundException if post not found', async () => {
+      jest.spyOn(postService, 'isExists').mockResolvedValueOnce(null);
+
+      await expect(
+        commentsController.count(fakeComment.post),
+      ).rejects.toThrowError('Post Not Found');
+    });
+
+    it('should count comments by post', async () => {
+      const count = 1;
+
+      jest
+        .spyOn(postService, 'isExists')
+        .mockResolvedValueOnce({ _id: fakeComment.post });
+
+      jest.spyOn(commentsService, 'count').mockResolvedValueOnce(count);
+
+      expect(await commentsController.count(fakeComment.post)).toBe(count);
     });
   });
 });
