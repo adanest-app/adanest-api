@@ -1,3 +1,4 @@
+import { UserDocument } from 'src/users/schemas/user.schema';
 import mongoose, { UpdateWriteOpResult } from 'mongoose';
 import { UsersService } from '../users/users.service';
 import { Test, TestingModule } from '@nestjs/testing';
@@ -32,6 +33,7 @@ describe('PostsController', () => {
           provide: UsersService,
           useValue: {
             isExists: jest.fn(),
+            getUserById: jest.fn(),
           },
         },
       ],
@@ -245,13 +247,15 @@ describe('PostsController', () => {
   describe('deletePost', () => {
     it('should return You are not owner of this post', async () => {
       jest.spyOn(postsService, 'checkOwner').mockResolvedValueOnce(false);
-
+      jest
+        .spyOn(usersService, 'getUserById')
+        .mockResolvedValueOnce(createMock<UserDocument>({}));
       expect(
         await postsController.deletePost(
           { user: { userId: '60f1b5b6b3e9a1f9c8f3b1a0' } },
           { id: '60f1b5b6b3e9a1f9c8f3b1a1' },
         ),
-      ).toBe('You are not owner of this post');
+      ).toBe('You are not owner of this post owner or admin');
     });
 
     it('should success deleted a post', async () => {

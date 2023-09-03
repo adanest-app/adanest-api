@@ -68,10 +68,14 @@ export class PostsController {
 
     return this.postsService.updatePost(id, body);
   }
+
   @Delete(':id')
   async deletePost(@Req() req: any, @Param() { id }: GetPostDto): Promise<any> {
-    if (!(await this.postsService.checkOwner(id, req.user.userId))) {
-      return 'You are not owner of this post';
+    if (
+      !(await this.postsService.checkOwner(id, req.user.userId)) &&
+      (await this.userService.getUserById(req.user.userId)).role !== 'admin'
+    ) {
+      return 'You are not owner of this post owner or admin';
     }
     return this.postsService.deletePost(id);
   }
