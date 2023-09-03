@@ -27,7 +27,8 @@ export class UsersController {
   constructor(private usersService: UsersService) {}
 
   @Get()
-  async getUsers(): Promise<any> {
+  async getUsers(@Query('role') role: string): Promise<any> {
+    if (role) return this.usersService.getUsersByRole(role);
     return this.usersService.getUsers();
   }
 

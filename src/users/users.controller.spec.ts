@@ -42,6 +42,7 @@ describe('UserController', () => {
             hashPassword: jest.fn().mockResolvedValueOnce('hashedPassword'),
             updateUser: jest.fn(),
             uploadAvatar: jest.fn(),
+            getUsersByRole: jest.fn(),
           },
         },
         JwtAuthGuard,
@@ -60,7 +61,15 @@ describe('UserController', () => {
     const user = createMock<UserDocument[]>([fakeUser]);
     jest.spyOn(usersService, 'getUsers').mockResolvedValueOnce(user);
 
-    expect(await controller.getUsers()).toEqual(user);
+    expect(await controller.getUsers('')).toEqual(user);
+  });
+
+  it('should get users by role', async () => {
+    const user = createMock<UserDocument[]>([fakeUser]);
+    jest.spyOn(usersService, 'getUsersByRole').mockResolvedValueOnce(user);
+    jest.spyOn(usersService, 'getUsers').mockResolvedValueOnce(user);
+
+    expect(await controller.getUsers('admin')).toEqual(user);
   });
 
   it('should get user', async () => {
