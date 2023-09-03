@@ -13,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
 import { ChatModule } from './chat/chat.module';
 import { NlpModule } from './nlp/nlp.module';
 import { LikesModule } from './likes/likes.module';
+import { ChallengeModule } from './challenge/challenge.module';
 
 @Module({
   imports: [
@@ -49,6 +50,7 @@ import { LikesModule } from './likes/likes.module';
     ChatModule,
     NlpModule,
     LikesModule,
+    ChallengeModule,
   ],
   providers: [
     {
