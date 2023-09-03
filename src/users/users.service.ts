@@ -85,8 +85,7 @@ export class UsersService {
         file: file.buffer,
         fileName: `avatar-${userId}.${file.mimetype.split('/')[1]}`,
         folder: '/adanest-avatars',
-        overwriteFile: true,
-        useUniqueFileName: false,
+        useUniqueFileName: true,
       });
       return res?.url;
     } catch (err) {
