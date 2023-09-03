@@ -1,4 +1,14 @@
-import { Body, Controller, Get, Post, Put, Req } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  Query,
+  Req,
+} from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { ChatState } from './enum/chat-state.enum';
 import { ChatService } from './chat.service';
@@ -11,12 +21,14 @@ export class ChatController {
   ) {}
 
   @Get()
-  async getMessages(@Req() req: any) {
+  async getMessages(@Req() req: any, @Query('from') from: string) {
     const userId = req.user.userId;
     if ((await this.userService.getUserById(userId)).role === 'admin') {
       return this.chatService.getMessages(userId, userId, true);
-    } else {
-      const admin = (await this.userService.getUsersByRole('admin'))[0];
+    } else if (from) {
+      const admin = (await this.userService.getUsersByRole('admin')).filter(
+        (user) => user._id.toString() === from,
+      )[0];
       return this.chatService.getMessages(userId, admin._id.toString());
     }
   }
@@ -36,7 +48,9 @@ export class ChatController {
         state: ChatState.SENT,
       });
     }
-    const admin = (await this.userService.getUsersByRole('admin'))[0];
+    const admin = (await this.userService.getUsersByRole('admin')).filter(
+      (user) => user._id.toString() === to,
+    )[0];
     return this.chatService.create({
       sender: userId,
       receiver: admin._id.toString(),
@@ -45,8 +59,23 @@ export class ChatController {
     });
   }
 
-  @Put('read')
-  async readMessage(@Req() req: any, @Body('messageId') id: string) {
+  @Put('read/:messageId')
+  async readMessage(@Req() req: any, @Param('messageId') id: string) {
+    const message = await this.chatService.getMessageById(id);
+    if (message.receiver.toString() !== req.user.userId) {
+      return 'You are not receiver of this message';
+    }
+
     return this.chatService.updateState(id, ChatState.READ);
+  }
+
+  @Delete(':messageId')
+  async deleteMessage(@Req() req: any, @Param('messageId') id: string) {
+    const message = await this.chatService.getMessageById(id);
+    if (message.sender.toString() !== req.user.userId) {
+      return 'You are not owner of this message';
+    }
+
+    return this.chatService.deleteMessage(id);
   }
 }

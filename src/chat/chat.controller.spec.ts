@@ -21,6 +21,8 @@ describe('ChatController', () => {
             getMessages: jest.fn(),
             create: jest.fn(),
             updateState: jest.fn(),
+            deleteMessage: jest.fn(),
+            getMessageById: jest.fn(),
           },
         },
 
@@ -57,7 +59,7 @@ describe('ChatController', () => {
       .spyOn(userService, 'getUserById')
       .mockResolvedValueOnce(createMock<UserDocument>(user));
     jest.spyOn(chatService, 'getMessages').mockResolvedValueOnce(messages);
-    expect(await controller.getMessages(req)).toBe(messages);
+    expect(await controller.getMessages(req, req.user.userId)).toBe(messages);
   });
 
   it('should get messages if not admin', async () => {
@@ -80,7 +82,7 @@ describe('ChatController', () => {
       .spyOn(userService, 'getUsersByRole')
       .mockResolvedValueOnce([createMock<UserDocument>(admin)]);
     jest.spyOn(chatService, 'getMessages').mockResolvedValueOnce(messages);
-    expect(await controller.getMessages(req)).toBe(messages);
+    expect(await controller.getMessages(req, req.user.userId)).toBe(messages);
   });
 
   it('should send message if admin', async () => {
@@ -146,6 +148,27 @@ describe('ChatController', () => {
     ).toBe(message);
   });
 
+  it('should not read message if not owner', async () => {
+    const message = {
+      _id: '5f9d4f8d1d9d9b1b3c9c8d9a',
+      sender: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9a'),
+      receiver: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9b'),
+      message: 'message',
+      state: 'sent',
+    };
+    jest.spyOn(chatService, 'getMessageById').mockResolvedValueOnce(message);
+    expect(
+      await controller.readMessage(
+        {
+          user: {
+            userId: '5f9d4f8d1d9d9b1b3c9c8d9c',
+          },
+        },
+        message._id,
+      ),
+    ).toBe('You are not receiver of this message');
+  });
+
   it('should read message', async () => {
     const message = {
       _id: '5f9d4f8d1d9d9b1b3c9c8d9a',
@@ -154,6 +177,7 @@ describe('ChatController', () => {
       message: 'message',
       state: 'sent',
     };
+    jest.spyOn(chatService, 'getMessageById').mockResolvedValueOnce(message);
     jest.spyOn(chatService, 'updateState').mockResolvedValueOnce({
       acknowledged: true,
       matchedCount: 1,
@@ -161,12 +185,71 @@ describe('ChatController', () => {
       upsertedId: null,
       upsertedCount: 0,
     });
-    expect(await controller.readMessage(null, message._id)).toEqual({
+    expect(
+      await controller.readMessage(
+        {
+          user: {
+            userId: message.receiver.toString(),
+          },
+        },
+        message._id,
+      ),
+    ).toEqual({
       acknowledged: true,
       matchedCount: 1,
       modifiedCount: 1,
       upsertedId: null,
       upsertedCount: 0,
+    });
+  });
+
+  it('should not delete message if not owner', async () => {
+    const message = {
+      _id: '5f9d4f8d1d9d9b1b3c9c8d9a',
+      sender: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9a'),
+      receiver: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9b'),
+      message: 'message',
+      state: 'sent',
+    };
+
+    jest.spyOn(chatService, 'getMessageById').mockResolvedValueOnce(message);
+    expect(
+      await controller.deleteMessage(
+        {
+          user: {
+            userId: '5f9d4f8d1d9d9b1b3c9c8d9c',
+          },
+        },
+        message._id,
+      ),
+    ).toBe('You are not owner of this message');
+  });
+
+  it('should delete message', async () => {
+    const message = {
+      _id: '5f9d4f8d1d9d9b1b3c9c8d9a',
+      sender: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9a'),
+      receiver: new mongoose.Types.ObjectId('5f9d4f8d1d9d9b1b3c9c8d9b'),
+      message: 'message',
+      state: 'sent',
+    };
+    jest.spyOn(chatService, 'getMessageById').mockResolvedValueOnce(message);
+    jest.spyOn(chatService, 'deleteMessage').mockResolvedValueOnce({
+      acknowledged: true,
+      deletedCount: 1,
+    });
+    expect(
+      await controller.deleteMessage(
+        {
+          user: {
+            userId: message.sender.toString(),
+          },
+        },
+        message._id,
+      ),
+    ).toEqual({
+      acknowledged: true,
+      deletedCount: 1,
     });
   });
 });

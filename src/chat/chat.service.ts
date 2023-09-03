@@ -42,12 +42,22 @@ export class ChatService {
       .exec();
   }
 
+  async getMessageById(id: string): Promise<Chat> {
+    return this.chatModel.findOne({ _id: id }).exec();
+  }
+
   async updateState(
     chatId: string,
     state: number,
   ): Promise<UpdateWriteOpResult> {
     return this.chatModel
       .updateOne({ _id: new mongoose.mongo.ObjectId(chatId) }, { state })
+      .exec();
+  }
+
+  async deleteMessage(chatId: string): Promise<mongoose.mongo.DeleteResult> {
+    return this.chatModel
+      .deleteOne({ _id: new mongoose.mongo.ObjectId(chatId) })
       .exec();
   }
 }

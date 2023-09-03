@@ -1,9 +1,9 @@
-import { Model, Query, UpdateWriteOpResult } from 'mongoose';
+import { Model, Query, UpdateWriteOpResult, mongo } from 'mongoose';
 import { Test, TestingModule } from '@nestjs/testing';
+import { Chat, ChatDocument } from './chat.schema';
 import { getModelToken } from '@nestjs/mongoose';
 import { createMock } from '@golevelup/ts-jest';
 import { ChatService } from './chat.service';
-import { Chat } from './chat.schema';
 
 describe('ChatService', () => {
   let service: ChatService;
@@ -18,7 +18,9 @@ describe('ChatService', () => {
           useValue: {
             create: jest.fn(),
             find: jest.fn(),
+            findOne: jest.fn(),
             updateOne: jest.fn().mockReturnThis(),
+            deleteOne: jest.fn(),
           },
         },
       ],
@@ -40,6 +42,21 @@ describe('ChatService', () => {
     };
     jest.spyOn(chatModel, 'create').mockResolvedValueOnce(chat as any);
     expect(await service.create(chat)).toBe(chat);
+  });
+
+  it('should get a chat by id', async () => {
+    const chat = {
+      sender: 'sender',
+      receiver: 'receiver',
+      message: 'message',
+    };
+    jest.spyOn(chatModel, 'findOne').mockReturnValue(
+      createMock<Query<Chat, unknown>>({
+        exec: jest.fn().mockResolvedValueOnce(chat),
+      }),
+    );
+
+    expect(await service.getMessageById('id')).toEqual(chat);
   });
 
   it('should get client messages ', async () => {
@@ -93,5 +110,19 @@ describe('ChatService', () => {
     );
 
     expect(await service.updateState(validObjectId, 1)).toEqual(res);
+  });
+
+  it('should delete a chat', async () => {
+    const validObjectId = '60f1b5b6b3c1d32d6c5a7d3f';
+    const res = {
+      deletedCount: 1,
+    };
+    jest.spyOn(chatModel, 'deleteOne').mockReturnValue(
+      createMock<Query<mongo.DeleteResult, ChatDocument>>({
+        exec: jest.fn().mockResolvedValueOnce(res),
+      }),
+    );
+
+    expect(await service.deleteMessage(validObjectId)).toEqual(res);
   });
 });
